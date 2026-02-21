@@ -1,54 +1,67 @@
-# FamilyHub — Gestão Familiar
+# FamilyHub — Aplicação de Gestão Familiar
 
-Aplicação de gestão familiar com foco em organização do dia a dia, colaboração entre membros e acompanhamento de metas, finanças, saúde e rotina escolar.
+Aplicação full-stack para gestão familiar com **React (frontend)**, **Node/Express (API)** e **MongoDB (NoSQL)**.
 
-## Objetivo
+## Funcionalidades disponíveis nesta versão para teste
 
-Centralizar as responsabilidades da família em uma única plataforma (web + mobile/PWA), com permissões por perfil, notificações e automações inteligentes.
+- Cadastro de famílias.
+- Gestão de membros (papéis: parent, child, guardian, guest).
+- Calendário familiar (criação e listagem de eventos).
+- Tarefas familiares (criação e mudança de status).
+- Layout responsivo (mobile, tablet e desktop).
 
-## Escopo funcional (alto nível)
+## Stack técnica
 
-- Perfis e permissões
-- Calendário compartilhado
-- Tarefas e responsabilidades
-- Metas familiares
-- Finanças
-- Lista de compras e refeições
-- Gestão escolar
-- Logística e transporte
-- Saúde e bem-estar
-- Dashboard inteligente
-- Notificações
-- Comunicação interna
-- Gamificação
-- Segurança e privacidade
-- Experiência do usuário (PWA, acessibilidade)
-- IA para recomendações
-- Integrações externas
+- Frontend: React + Vite.
+- Backend: Node.js + Express + Mongoose.
+- Banco: MongoDB.
+- Orquestração local: Docker Compose.
 
+## Como rodar com Docker (recomendado)
 
-## Decisões técnicas obrigatórias
+```bash
+docker compose up --build
+```
 
-- Frontend em **React**.
-- Banco de dados **NoSQL MongoDB** como datastore principal.
-- Interface **responsiva por padrão** (mobile-first), com suporte a tablet e desktop em todos os módulos.
+Serviços:
+- Web: http://localhost:5173
+- API: http://localhost:4000/api
+- MongoDB: mongodb://localhost:27017/familyhub
 
-## Entregas criadas nesta versão
+## Como rodar local sem Docker
 
-- `docs/product-requirements.md`: visão de produto, funcionalidades, critérios de sucesso e fases.
-- `docs/architecture.md`: proposta de arquitetura técnica inicial.
-- `docs/mvp-backlog.md`: backlog priorizado (MVP + pós-MVP).
+### 1) API
 
-## Próximos passos sugeridos
+```bash
+cd backend
+cp .env.example .env
+npm install
+npm run dev
+```
 
-1. Validar escopo MVP com 3 a 5 famílias-piloto.
-2. Stack definida para implementação inicial:
-   - Frontend: **React** (web + PWA).
-   - Banco de dados principal: **MongoDB** (NoSQL).
-   - Backend/API, notificações e autenticação seguindo os documentos de arquitetura e backlog.
-3. Implementar Sprint 0:
-   - setup de projeto,
-   - autenticação,
-   - modelo de dados base,
-   - CI/CD,
-   - observabilidade.
+### 2) Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+## Endpoints principais
+
+- `GET /api/health`
+- `GET /api/families`
+- `POST /api/families`
+- `GET /api/families/:familyId/members`
+- `POST /api/families/:familyId/members`
+- `GET /api/families/:familyId/events`
+- `POST /api/families/:familyId/events`
+- `GET /api/families/:familyId/tasks`
+- `POST /api/families/:familyId/tasks`
+- `PATCH /api/tasks/:taskId/status`
+
+## Responsividade
+
+- Estratégia mobile-first.
+- Breakpoints implementados para 768px e 1024px.
+- Interface única adaptável para celular/tablet/desktop.
