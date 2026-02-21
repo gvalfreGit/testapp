@@ -1,0 +1,10 @@
+[project]
+name = "novo-projeto"
+version = "0.1.0"
+description = "Projeto inicial em Python"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[tool.unittest]
+start-directory = "tests"
+pattern = "test_*.py"
