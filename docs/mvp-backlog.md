@@ -1,5 +1,15 @@
 # Backlog priorizado
 
+## Base técnica obrigatória (Sprint 0)
+
+1. **Setup React + MongoDB**
+   - Estruturar frontend React (PWA) e backend conectado ao MongoDB.
+   - Critério: ambiente local sobe com persistência em MongoDB e build web React.
+
+2. **Fundação de responsividade**
+   - Definir design tokens, grid e breakpoints globais.
+   - Critério: layout base validado para mobile, tablet e desktop.
+
 ## MVP (prioridade alta)
 
 1. **Onboarding de família e membros**

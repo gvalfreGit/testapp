@@ -1,5 +1,11 @@
 # PRD — FamilyHub
 
+## 0) Premissas técnicas mandatórias
+
+- Frontend obrigatório em **React**.
+- Banco de dados principal obrigatório em **MongoDB (NoSQL)**.
+- Experiência responsiva obrigatória em todos os módulos (celular, tablet e desktop).
+
 ## 1) Visão do produto
 
 O FamilyHub é uma plataforma para coordenar a rotina familiar, com colaboração entre membros, organização de agenda, tarefas, finanças e saúde em um ambiente seguro e com níveis de acesso por perfil.
@@ -94,7 +100,7 @@ O FamilyHub é uma plataforma para coordenar a rotina familiar, com colaboraçã
 - Disponibilidade: alvo de 99.5% no MVP.
 - Escalabilidade: arquitetura modular para novos domínios.
 - Acessibilidade: aderência WCAG 2.1 AA.
-- UX: responsiva, modo escuro e PWA.
+- UX: responsiva por padrão (mobile-first), modo escuro e PWA.
 
 ## 5) Métricas de sucesso (KPIs)
 

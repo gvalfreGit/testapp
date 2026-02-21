@@ -2,13 +2,14 @@
 
 ## 1) Visão de solução
 
-Arquitetura modular com frontend web (PWA), backend API e serviços de domínio, banco relacional e fila de eventos para notificações/agendamentos.
+Arquitetura modular com frontend web (PWA) em **React**, backend API e serviços de domínio, **MongoDB (NoSQL)** como banco principal e fila de eventos para notificações/agendamentos.
 
 ## 2) Componentes principais
 
-- **Frontend (Web/PWA)**
-  - UI responsiva, modo escuro, acessibilidade.
+- **Frontend (React Web/PWA)**
+  - UI responsiva (mobile-first), modo escuro, acessibilidade.
   - Perfis infantis com experiência simplificada.
+  - Componentes e layouts adaptáveis para celular, tablet e desktop.
 
 - **API Gateway / BFF**
   - Entrada única para clientes.
@@ -22,7 +23,7 @@ Arquitetura modular com frontend web (PWA), backend API e serviços de domínio,
   - Health/School/Logistics (expansão por fases).
 
 - **Infra de suporte**
-  - Banco relacional (dados transacionais).
+  - **MongoDB (NoSQL)** para dados transacionais e documentos de domínio.
   - Cache (sessão/consultas quentes).
   - Fila/event bus (notificações, jobs recorrentes).
   - Object storage (anexos, boletins, arquivos).
@@ -58,3 +59,11 @@ Relações fundamentais:
 - Feature flags para liberar módulos gradualmente.
 - Observabilidade desde o início (logs, métricas, tracing).
 - Testes por camada: unitário, integração e e2e crítico.
+
+
+## 6) Diretrizes de responsividade (obrigatórias)
+
+- Abordagem mobile-first em todas as telas.
+- Breakpoints mínimos: 360px, 768px, 1024px e 1440px.
+- Navegação e formulários validados para toque e teclado.
+- Critério de aceite: nenhuma funcionalidade MVP pode ser entregue sem cobertura responsiva.
