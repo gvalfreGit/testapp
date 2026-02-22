@@ -1,0 +1,10 @@
+[project]
+name = "apexapp"
+version = "0.1.0"
+description = "Aplicação web para Neptune Apex"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[tool.unittest]
+start-directory = "tests"
+pattern = "test_*.py"
