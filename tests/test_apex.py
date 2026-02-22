@@ -2,7 +2,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from src.novo_projeto.apex import load_status_from_csv, parse_webhook_payload
+from src.apexapp.apex import load_status_from_csv, parse_webhook_payload
 
 
 class TestApexIntegrations(unittest.TestCase):

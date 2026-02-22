@@ -1,7 +1,7 @@
 """Atalho para executar a aplicação sem usar -m."""
 
-from src.novo_projeto.main import parse_args
-from src.novo_projeto.web import run_server
+from src.apexapp.main import parse_args
+from src.apexapp.web import run_server
 
 
 if __name__ == "__main__":

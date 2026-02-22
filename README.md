@@ -1,4 +1,4 @@
-# Dashboard Web para Neptune Apex
+# apexapp — Dashboard Web para Neptune Apex
 
 Aplicação web em Python para consultar dados do controlador Neptune Apex por **3 estratégias**:
 
@@ -11,7 +11,7 @@ Aplicação web em Python para consultar dados do controlador Neptune Apex por *
 Opção 1 (recomendada):
 
 ```bash
-python -m src.novo_projeto.main
+python -m src.apexapp.main
 ```
 
 Opção 2 (atalho):
@@ -23,7 +23,7 @@ python run.py
 Escolha a porta (opcional):
 
 ```bash
-python -m src.novo_projeto.main --port 8080
+python -m src.apexapp.main --port 8080
 ```
 
 A aplicação sobe em `http://localhost:8000` (ou na porta escolhida).
@@ -62,5 +62,5 @@ python -m unittest discover -s tests -p 'test_*.py'
 ## Troubleshooting rápido
 
 - Rode os comandos na pasta raiz do projeto (`/workspace/testapp`).
-- Se aparecer erro de porta em uso, troque a porta: `python -m src.novo_projeto.main --port 8080`.
+- Se aparecer erro de porta em uso, troque a porta: `python -m src.apexapp.main --port 8080`.
 - Teste rápido de saúde: `curl http://localhost:8000/` (ou `curl http://localhost:8000/index.html`).

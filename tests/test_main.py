@@ -7,7 +7,7 @@ import urllib.error
 import urllib.request
 from http.server import ThreadingHTTPServer
 
-from src.novo_projeto.web import ApexWebHandler, HTML_PAGE
+from src.apexapp.web import ApexWebHandler, HTML_PAGE
 
 
 class TestMain(unittest.TestCase):

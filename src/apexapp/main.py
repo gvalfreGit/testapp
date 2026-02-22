@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import argparse
 
-from src.novo_projeto.web import run_server
+from src.apexapp.web import run_server
 
 
 def parse_args() -> argparse.Namespace:
